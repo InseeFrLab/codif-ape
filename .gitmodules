@@ -1,18 +1,28 @@
 [submodule "codif-ape-train"]
 	path = codif-ape-train
 	url = https://github.com/InseeFrLab/codif-ape-train.git
+	branch = main
 [submodule "codif-ape-api"]
 	path = codif-ape-api
 	url = https://github.com/InseeFrLab/codif-ape-api.git
+	branch = main
 [submodule "codif-ape-cd"]
 	path = codif-ape-cd
 	url = https://github.com/InseeFrLab/codif-ape-cd.git
+	branch = main
 [submodule "codif-ape-preprocess"]
 	path = codif-ape-preprocess
 	url = https://github.com/InseeFrLab/codif-ape-preprocess.git
+	branch = main
 [submodule "GRAAL"]
 	path = GRAAL
 	url = https://github.com/InseeFrLab/GRAAL.git
+	branch = main
 [submodule "codif-ape-docs"]
 	path = codif-ape-docs
 	url = https://github.com/InseeFrLab/codif-ape-docs.git
+	branch = main
+[submodule "codif-ape-nace-revision"]
+	path = codif-ape-nace-revision
+	url = https://github.com/InseeFrLab/codif-ape-nace-revision.git
+	branch = main
