@@ -1,0 +1,18 @@
+[submodule "codif-ape-train"]
+	path = codif-ape-train
+	url = https://github.com/InseeFrLab/codif-ape-train.git
+[submodule "codif-ape-api"]
+	path = codif-ape-api
+	url = https://github.com/InseeFrLab/codif-ape-api.git
+[submodule "codif-ape-cd"]
+	path = codif-ape-cd
+	url = https://github.com/InseeFrLab/codif-ape-cd.git
+[submodule "codif-ape-preprocess"]
+	path = codif-ape-preprocess
+	url = https://github.com/InseeFrLab/codif-ape-preprocess.git
+[submodule "GRAAL"]
+	path = GRAAL
+	url = https://github.com/InseeFrLab/GRAAL.git
+[submodule "codif-ape-docs"]
+	path = codif-ape-docs
+	url = https://github.com/InseeFrLab/codif-ape-docs.git
