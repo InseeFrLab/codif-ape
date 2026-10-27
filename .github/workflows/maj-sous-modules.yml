@@ -1,0 +1,33 @@
+name: Mettre à jour les sous-modules
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  maj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Avancer les sous-modules au dernier main
+        run: git submodule update --remote --recursive
+
+      - name: Committer et pousser s'il y a du changement
+        run: |
+          # --force : .gitmodules déclare ignore = all, que git add respecte sinon
+          git add --force $(git config -f .gitmodules --get-regexp '\.path$' | awk '{print $2}')
+          if git diff --cached --ignore-submodules=none --quiet; then
+            echo "Sous-modules déjà à jour."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Avancer les sous-modules au dernier main"
+          git push

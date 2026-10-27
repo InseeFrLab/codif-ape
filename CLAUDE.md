@@ -4,7 +4,7 @@ Ce dépôt est un **espace de travail**, pas un produit. Il regroupe les dépôt
 
 ## Sous-modules
 
-- Mise à jour : `git submodule update --remote --recursive`. Les commits pointés par le méta-dépôt n'ont pas d'importance. Un commit qui ne fait que les avancer est acceptable, mais jamais nécessaire.
+- Mise à jour : `git submodule update --remote --recursive`. Les pointeurs du méta-dépôt sont avancés chaque nuit par le workflow `.github/workflows/maj-sous-modules.yml` : ne pas faire de commit qui ne fait que les avancer. `.gitmodules` déclare `ignore = all`, donc `git status` à la racine ne montre pas les changements faits dans les sous-modules : faire `git status` dans le sous-module.
 - Chaque sous-module est un dépôt à part entière, avec sa CI, ses tags et ses conventions. Pour modifier un sous-module, s'y placer, faire `git switch main` (ou créer une branche, puisque `update --remote` laisse la HEAD détachée), puis commiter **dans le sous-module**. Le cas échéant, lire d'abord son `CLAUDE.md` ou son `README.md`.
 - Ne jamais commiter de code applicatif à la racine de ce dépôt : elle ne contient que la documentation de l'espace de travail.
 

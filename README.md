@@ -2,7 +2,9 @@
 
 Espace de travail du projet de codification automatique de l'APE (NAF / NACE) à l'Insee.
 
-Ce dépôt regroupe tous les dépôts du projet en sous-modules, chacun sur sa branche `main`. Il ne sert pas à publier des versions : les commits pointés par les sous-modules n'ont pas d'importance. Ce qui compte, c'est la carte ci-dessous : qui produit quoi, où sont les données, et qui déploie quoi.
+Ce dépôt regroupe tous les dépôts du projet en sous-modules, chacun sur sa branche `main`. Il ne sert pas à publier des versions. Ce qui compte, c'est la carte ci-dessous : qui produit quoi, où sont les données, et qui déploie quoi.
+
+Les pointeurs des sous-modules se mettent à jour automatiquement. Chaque nuit à 3 h UTC, le workflow [`maj-sous-modules`](.github/workflows/maj-sous-modules.yml) les avance au dernier commit de `main` de chaque dépôt et pousse le résultat. On peut aussi le lancer à la main depuis l'onglet Actions. Il n'y a donc jamais besoin de commiter un changement de pointeur à la main. `.gitmodules` déclare d'ailleurs `ignore = all` pour que `git status` ne propose pas de le faire.
 
 La note technique publique, en anglais et en français, est en ligne sur <https://inseefrlab.github.io/codif-ape-docs/>. Les présentations sont sur <https://inseefrlab.github.io/codif-ape-prez/>.
 
